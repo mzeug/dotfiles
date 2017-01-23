@@ -1,0 +1,4 @@
+
+text-color: #AC9974
+background-color: #002B36
+build-in colorscheme: Tango
