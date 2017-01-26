@@ -53,5 +53,24 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/Solarized'
 Plugin 'Lokaltog/vim-powerline'
+Plugin 'vim-syntastic/syntastic'
 
 call vundle#end()
+
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_loc_list_height=3
+
+hi SpellBad ctermbg=41
+hi SpellCap ctermbg=198
+
+" Syntastic Python
+let g:syntastic_python_checkers = ['pylint']
