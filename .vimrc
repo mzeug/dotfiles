@@ -32,7 +32,10 @@ set foldnestmax=10
 nnoremap <space> za
 
 "COLORS
-colorscheme desert
+colorscheme molokai
+let g:molokai_original = 1
+hi Normal ctermbg=none
+
 hi Search cterm=NONE ctermbg=white ctermfg=black
 :highlight Folded ctermbg=darkgrey ctermfg=black
 :highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
@@ -74,3 +77,4 @@ hi SpellCap ctermbg=198
 
 " Syntastic Python
 let g:syntastic_python_checkers = ['pylint']
+let g:syntastic_javascript_checkers = ['eslint']
